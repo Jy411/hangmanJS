@@ -48,7 +48,9 @@ body {
     width: 50vw;
 }
 
-
+.strikeThroughText {
+    text-decoration-line: line-through;
+}
 
 #letterChoiceContainer > div {
     /*font-size: 1.5rem;*/
@@ -62,4 +64,22 @@ body {
 #letterChoiceContainer > div:hover {
     cursor: pointer;
     background-color: #ffc8dd;
+}
+
+#buttonContainer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#restartBtn {
+    padding: 20px;
+    background-color: #a2d2ff;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+#restartBtn:hover {
+    cursor: pointer;
+    background-color: aqua;
 }

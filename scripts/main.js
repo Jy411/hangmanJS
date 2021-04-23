@@ -6,7 +6,7 @@ const letterList = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", 
   "U", "V", "W", "X", "Y", "Z"];
 
 letterList.forEach((letter) => {
-  letterChoiceContainerEl.innerHTML += "<div onclick=clickedLetter('"+letter+"')>" + letter + "</div>"
+  letterChoiceContainerEl.innerHTML += "<div id="+letter+" onclick=clickedLetter('"+letter+"')>" + letter + "</div>"
 })
 
 /*
@@ -43,9 +43,12 @@ fetchWordAndRender();
 
 // function for clicking letter
 const gameInfoContainerEl = document.getElementById("gameInfoContainer");
+const btnContainerEl = document.getElementById("buttonContainer");
 let tryCount = 5;
 gameInfoContainerEl.innerHTML += "<p>Attempts Remaining: " + tryCount + "</p>"
 const clickedLetter = (letter) => {
+  const letterChoiceEl = document.getElementById(letter);
+  letterChoiceEl.className += 'strikeThroughText'
   const gameLetter = document.getElementsByClassName("letter" + letter);
   if (tryCount > 0) {
     if (gameLetter.length === 0) {
@@ -65,11 +68,17 @@ const clickedLetter = (letter) => {
     while (gameWord.length > 0) {
       gameWord[0].className = "visible";
     }
+    btnContainerEl.innerHTML += "<div onclick='reload()' id='restartBtn'>Play Again!</div>"
   }
 }
 
 const checkGameStatus = () => {
   // todo: win condition
+
 }
 
 checkGameStatus();
+
+const reload = () => {
+  location.reload();
+}
