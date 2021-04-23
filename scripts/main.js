@@ -60,6 +60,7 @@ const clickedLetter = (letter) => {
         gameLetter[0].className = "visible";
       }
     }
+    checkGameStatus();
   }
   // show all letters
   if (tryCount === 0) {
@@ -73,11 +74,15 @@ const clickedLetter = (letter) => {
 }
 
 const checkGameStatus = () => {
-  // todo: win condition
-
+  // checks win/lose
+  const visibleLetters = document.getElementsByClassName("visible");
+  const gameLetterCount = document.getElementsByClassName("wordChar");
+  if (visibleLetters.length === gameLetterCount.length) {
+    gameInfoContainerEl.innerHTML = "<p>You win!</p>"
+    btnContainerEl.innerHTML += "<div onclick='reload()' id='restartBtn'>Play Again!</div>"
+  }
 }
 
-checkGameStatus();
 
 const reload = () => {
   location.reload();
