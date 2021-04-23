@@ -6,13 +6,14 @@ html {
 
 body {
     display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
-    height: 100vh;
+    justify-content: space-around;
+    height: 90vh;
     background-color: #ffe5d9;
 }
 
-#inputBoxContainer {
+#gameWordContainer {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -20,9 +21,20 @@ body {
     justify-content: center;
 }
 
-.inputBox {
-    text-align: center;
+.wordChar {
+    background-color: #a2d2ff;
+    padding: 20px;
+    font-weight: bold;
+    margin: 0 20px;
+    border-radius: 5px;
+}
 
+.hide {
+    visibility: hidden;
+}
+
+.show {
+    visibility: visible;
 }
 
 #letterChoiceContainer {
@@ -32,6 +44,7 @@ body {
     align-items: center;
     justify-content: center;
     text-align: center;
+    bottom: 0
 }
 
 #letterChoiceContainer > div {
