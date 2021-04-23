@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik&display=swap');
+
+html {
+    font-family: 'Rubik', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+    background-color: #ffe5d9;
+}
+
+#inputBoxContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.inputBox {
+    text-align: center;
+
+}
+
+#letterChoiceContainer {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#letterChoiceContainer > div {
+    /*font-size: 1.5rem;*/
+    width: 10px;
+    font-weight: bold;
+    background-color: #f4acb7;
+    margin: 0.5rem;
+    padding: 1rem;
+    border-radius: 10px;
+}
