@@ -17,7 +17,7 @@ const wordDefContainerEl = document.getElementById("wordDefinitionContainer");
 const fetchWordAndRender = () => {
   // fetches random word
   const API_KEY = "9ng3mailtyfjrv7jz3x13l1z2bubppsaqqg05x253xp2pqztk";
-  const API_URL = "http://api.wordnik.com/v4/words.json/randomWord?api_key="+API_KEY;
+  const API_URL = "https://api.wordnik.com/v4/words.json/randomWord?api_key="+API_KEY;
   fetch(API_URL)
       .then(res => res.json())
       .then((wordObj) => {
